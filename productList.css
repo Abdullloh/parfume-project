@@ -1,0 +1,57 @@
+.mainSection {
+    background: url('./assets/images/plpBg.png') no-repeat center;
+    background-size: cover;
+    height: 100%;
+    color: #fff;
+    width: 100%;
+    justify-content: space-between;
+}
+.products .carouselController select {
+    border: none;
+    color: #7373d6;
+}
+.products .productContainer {
+    flex-wrap: wrap;
+} 
+.products .productContainer .productCard {
+    min-width: 30% !important;
+    max-width: 100%;
+}
+.productCard .productImage img {
+    width: 100%;
+    object-fit: cover;
+}
+.productContainer .leftContainer {
+    width: 65%;
+    position: relative;
+}
+.leftContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.leftContainer .leftText {
+    position: absolute;
+    bottom: 10px;
+    color: white;
+    bottom: 55px;
+    left: 40px;
+    width: 85%;
+}
+.leftText h3 {
+    font-size: 40px;
+    font-weight: 600;
+}
+@media (max-width:578px){
+    .products {
+        margin-top: 30px;
+    }
+    .leftText h3 {
+        font-size: 16px;
+    }
+    .productContainer .leftContainer {
+        width: 91%;
+        height: 550px;
+        margin-bottom: 10px;
+    }
+}
