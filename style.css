@@ -399,15 +399,13 @@ main .gallery {
     width: 100%;
 }
 footer {
-    height: 60%;
+    min-height: 60%;
     padding: 80px;
     width: 100%;
     background: #222222;
     color: white;
 }
-footer .socialMedia {
 
-}
 .socialMedia h4 {
     text-transform: uppercase;
 }
