@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./styles/pdp.css">
+    <script src="./js/script.js" async></script>
+    <script type="module" src="./js/Pdp.js"></script>
+  </head>
+  <body>
+    <main>
+      <section class="mainSection container flex flex-column">
+        <header class="flex flex-column">
+          <p class="flex">Free Shipping for all orders over $100</p>
+          <nav class="flex">
+            <div class="leftNav">
+              <span
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                class="mobile"
+                >menu</span
+              >
+              <span>shop</span>
+              <span>about</span>
+              <span>suncare 101</span>
+            </div>
+            <img src="./assets/images/Headline2.svg" alt="" />
+            <div class="rightNav">
+              <span>account</span>
+              <span>search</span>
+              <span onclick="window.location.href = './cart.html'" class="mobile">cart(0)</span>
+            </div>
+          </nav>
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <a href="./index.html">Home</a>
+                  <a href="./pdp.html">About</a>
+                  <a href="./productList.html">Products</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div id="selected__product" class="flex">
+          <div class="product__swiper">
+            <div
+            class="swiper mySwiper2"
+          >
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./assets/images/cartProduct.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/cartProduct.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/portrait.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/collection.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/model1.svg" />
+              </div>
+            </div>
+            <!-- <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div> -->
+          </div>
+          <div thumbsSlider="" class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./assets/images/cartProduct.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/cartProduct.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/portrait.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/collection.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/model1.svg" />
+              </div>
+            </div>
+          </div>
+          </div>
+          <div class="product__description">
+            <h3>Niche Beauty
+              CCC Cream – Niche Beauty</h3>
+              <p class="price">$28</p>
+              <p class="text">The original, weightless, scentless sunscreen with SPF 55 that leaves a shinny finish. Formulated with the most sensitive and vulnerable in mind, with a custom blend of natural, gentle and hydrating island ingredients mixed with the most effective skincare-grade actives.</p>
+              <div class="size flex flex-column">
+                <p class="flex">Size <span style="margin-left: 8px;">50ml</span></p>
+                <div class="size__buttons flex">
+                  <button onclick="()=>addClass(el)" class="button__item">
+                    1.7 fl oz
+                  </button>
+                  <button  class="button__item">
+                    1.7 fl oz
+                  </button>
+                  <button disabled class="button__item">
+                    1.7 fl oz
+                  </button>
+                </div>
+                <div class="size__radio flex flex-column">
+                  <div>
+                    <input id="discount" name="disc" type="radio">
+                    <label for="discount">$25.99 Subscribe and save. Details</label>
+                  </div>
+                  <div>
+                    <input id="no" name="disc" type="radio">
+                    <label for="no">$25.99 Subscribe and save. Details</label>
+                  </div>
+                </div>
+              </div>
+              <div class="add__card flex">
+                <div style="flex-grow:1 ;" class="counter">
+                  <button onclick="decrement()"><img src="./assets/icons/minus.svg" alt=""></button>
+                                       <span id="number">1</span>
+                                    <button onclick="increment()"><img src="./assets/icons/plusIcon.svg" alt=""></button>
+                </div>
+                <button style="flex-grow: 2;">Add to cart - $28.00</button>
+              </div>
+              <p style="margin:10px 0">Starting at $20/mo with <img src="./assets/icons/image 6.svg" alt=""><a href="#">Learn more</a></p>
+              <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                      Use Instruction
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <strong>Lorem ipsum dolor sit amet consectetur adipisicing elit.</strong>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Ingredients
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <strong>Lorem ipsum dolor sit amet consectetur adipisicing elit.</strong>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Accordion Item #3
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <strong>Lorem ipsum dolor sit amet consectetur adipisicing elit.</strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </section>
+      <section class="productDetail">
+        <div class="productDetail__left">
+          <div class="productDetail__left__products">
+
+          </div>
+          <div class="productDeatil__left__selectedProdcut">
+            
+          </div>
+        </div>  
+        <div class="productDetail__right">
+
+        </div>
+      </section>
+      <section id="ingredient" class="flex">
+        <div class="ingredient__items flex">
+          <h3>Ingredients</h3>
+          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+          <div class="ingredient__items__container">
+              <div class="ingredient__item">
+                <img class="item__image" src="./assets/icons/drop.svg" alt="">
+                <p class="item__text">Hydrating Nectar</p>
+              </div>
+              <div class="ingredient__item">
+                <img class="item__image" src="./assets/icons/plant.svg" alt="">
+                <p class="item__text">Hydrating Nectar</p>
+              </div>
+              <div class="ingredient__item">
+                <img class="item__image" src="./assets/icons/tree.svg" alt="">
+                <p class="item__text">Hydrating Nectar</p>
+              </div>
+              <div class="ingredient__item">
+                <img class="item__image" src="./assets/icons/chemistry.svg" alt="">
+                <p class="item__text">Hydrating Nectar</p>
+              </div>
+              <div class="ingredient__item">
+                <img class="item__image" src="./assets/icons/oil.svg" alt="">
+                <p class="item__text">Hydrating Nectar</p>
+              </div>
+              <div class="ingredient__item">
+                <img class="item__image" src="./assets/icons/grape.svg" alt="">
+                <p class="item__text">Hydrating Nectar</p>
+              </div>
+          </div>
+          <h3>Full Ingredient glossary</h3>
+        </div>
+        <div class="ingredient__banner">
+          <img class="ingredient__banner__image" src="./assets/images/ingredientBanner.png" alt="">
+        </div>
+      </section>
+      <section class="products   container">
+        <div class="productHeader flex">
+            <div class="leftTitle">
+                <h3>You might also like</h3>
+            </div>
+            <div class="carouselController flex">
+                <a href="#">Shop all</a>
+                <div class="btnContainer flex">
+                  <span class="prev-button left"><</span>
+                  <span  class="nxt-button">></span>
+
+                </div>
+            </div>
+          </div>
+          <div class="productContainer flex">
+              <div class="productCard">
+                <div class="productImage">
+                  <span  class="type">New</span>
+                  <img src="./assets/images/product photo.png" alt="">
+                  <button>+ quick shop</button>
+                </div>
+                <div class="productInfo">
+                  <p class="shortDecription">Your Skin But Better CC+ Cream with SPF50 12ml </p>
+                  <span class="price">$28.00</span>
+                </div>
+              </div>
+              <div class="productCard">
+                <div class="productImage">
+                  <span class="type">New</span>
+                  <img src="./assets/images/product photo.png" alt="">
+                  <button>+ quick shop</button>
+                </div>
+                <div class="productInfo">
+                  <p class="shortDecription">Your Skin But Better CC+ Cream with SPF50 12ml </p>
+                  <span class="price">$28.00</span>
+                </div>
+              </div>
+              <div class="productCard">
+                <div class="productImage">
+                  <span class="type">New</span>
+                  <img src="./assets/images/product photo.png" alt="">
+                  <button>+ quick shop</button>
+                </div>
+                <div class="productInfo">
+                  <p class="shortDecription">Your Skin But Better CC+ Cream with SPF50 12ml </p>
+                  <span class="price">$28.00</span>
+                </div>
+              </div>
+              <div class="productCard">
+                <div class="productImage">
+                  <span class="type">New</span>
+                  <img src="./assets/images/product photo.png" alt="">
+                  <button>+ quick shop</button>
+                </div>
+                <div class="productInfo">
+                  <p class="shortDecription">Your Skin But Better CC+ Cream with SPF50 12ml </p>
+                  <span class="price">$28.00</span>
+                </div>
+              </div>
+              <div class="productCard">
+                <div class="productImage">
+                  <span class="type">New</span>
+                  <img src="./assets/images/product photo.png" alt="">
+                  <button>+ quick shop</button>
+                </div>
+                <div class="productInfo">
+                  <p class="shortDecription">Your Skin But Better CC+ Cream with SPF50 12ml </p>
+                  <span class="price">$28.00</span>
+                </div>
+              </div>
+              <div class="productCard">
+                <div class="productImage">
+                  <span class="type">New</span>
+                  <img src="./assets/images/product photo.png" alt="">
+                  <button>+ quick shop</button>
+                </div>
+                <div class="productInfo">
+                  <p class="shortDecription">Your Skin But Better CC+ Cream with SPF50 12ml </p>
+                  <span class="price">$28.00</span>
+                </div>
+              </div>
+              <div class="productCard">
+                <div class="productImage">
+                  <span class="type">New</span>
+                  <img src="./assets/images/product photo.png" alt="">
+                  <button>+ quick shop</button>
+                </div>
+                <div class="productInfo">
+                  <p class="shortDecription">Your Skin But Better CC+ Cream with SPF50 12ml </p>
+                  <span class="price">$28.00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="products flex collections container">
+        <div style="justify-content:start;margin-right: 40px;" class="productHeader flex-column flex">
+          <div class="leftTitle" style="width: 100%;">
+            <p>The results</p>
+            <h3 style="font-size: 40px;">From our customers</h3>
+        </div>
+        <div class="carouselController flex">
+            <div class="btnContainer flex">
+              <span style="background:#C9C9FF;color:#fff" class="prev-button left"><</span>
+              <span style="background: #fff; color:#7373D7"  class="nxt-button">></span>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="productContainer flex">
+        <div class="productCard">
+          <div class="productImage">
+            <img src="./assets/images/customer1.jpg" alt="">
+          </div>
+          <div class="productInfo">
+            <p class="shortDecription">Sed ut perspiciatis </p>
+          </div>
+        </div>
+        <div class="productCard">
+          <div class="productImage">
+            <img src="./assets/images/customer2.jpg" alt="">
+          </div>
+          <div class="productInfo">
+            <p class="shortDecription">Sed ut perspiciatis </p>
+          </div>
+        </div>
+        <div class="productCard">
+          <div class="productImage">
+            <img src="./assets/images/customer3.jpg" alt="">
+          </div>
+          <div class="productInfo">
+            <p class="shortDecription">Sed ut perspiciatis </p>
+          </div>
+        </div>
+        <div class="productCard">
+          <div class="productImage">
+            <img src="./assets/images/customer1.jpg" alt="">
+          </div>
+          <div class="productInfo">
+            <p class="shortDecription">Sed ut perspiciatis </p>
+          </div>
+        </div>
+        <div class="productCard">
+          <div class="productImage">
+            <img src="./assets/images/customer2.jpg" alt="">
+          </div>
+          <div class="productInfo">
+            <p class="shortDecription">Sed ut perspiciatis </p>
+          </div>
+        </div>
+        <div class="productCard">
+          <div class="productImage">
+            <img src="./assets/images/customer2.jpg" alt="">
+          </div>
+          <div class="productInfo">
+            <p class="shortDecription">Sed ut perspiciatis </p>
+          </div>
+        </div>
+        <div class="productCard">
+          <div class="productImage">
+            <img src="./assets/images/customer3.jpg" alt="">
+          </div>
+          <div class="productInfo">
+            <p class="shortDecription">Sed ut perspiciatis </p>
+          </div>
+        </div>
+      </div>
+      </section>
+      <footer class="flex">
+        <div class="socialMedia">
+          <h4>join the club</h4>
+          <p>Keep up with our new releases, beauty tips and what Winnie’s been up to.</p>
+          <input placeholder="Email Address" type="text">
+          <div class="socialIcons">
+            <p>
+              <img src="./assets/images/facebook.svg" alt="">
+            </p>
+            <p>
+              <img src="./assets/images/twitter.svg" alt="">
+            </p>
+            <p>
+              <img src="./assets/images/facebook.svg" alt="">
+            </p>
+          </div>
+          <div class="privacy">
+            <span>© 2021 Cream Shop</span>
+            <span>Terms and conditions</span>
+            <span>Privacy Policy</span>
+          </div>
+        </div>
+        <div class="line"></div>
+        <div class="footerRight flex">
+          <div class="footerInfo">
+            <h5>Shop</h5>
+            <ul>
+              <li>Shop all</li>
+              <li>Best Sellers</li>
+              <li>Universal Mineral</li>
+              <li>Universal Mineral</li>
+              <li>Isie Glow to Isle</li>
+              <li>Deepwater</li>
+              <li>Winne Selects</li>
+            </ul>
+          </div>
+          <div class="footerInfo">
+            <h5>Learn</h5>
+            <ul>
+              <li>About Us</li>
+              <li>Ingredient Glossary</li>
+              <li>Sun Care 101</li>
+              <li>Our Journey</li>
+            </ul>
+          </div>
+          <div class="footerInfo">
+            <h5>Customer</h5>
+            <ul>
+              <li>Contact Us</li>
+              <li>Help/FAQ</li>
+              <li>My Account</li>
+              <li>Shipping and Return</li>
+            </ul>
+          </div>
+          <div class="privacy">
+            <span>© 2021 Cream Shop</span>
+            <span>Terms and conditions</span>
+            <span>Privacy Policy</span>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </body>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 10,
+      slidesPerView: 4,
+      freeMode: true,
+      watchSlidesProgress: true
+    });
+    var swiper2 = new Swiper(".mySwiper2", {
+      spaceBetween: 10,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+      },
+      thumbs: {
+        swiper: swiper
+      }
+    });
+
+    function addClass(el){
+console.log(el);
+    }
+    let el = document.querySelector("#number")
+  function increment(){
+    el.innerText++
+  }
+  function decrement(){
+    console.log(el);
+    if(el.innerText > 0){
+      --el.innerText
+    }
+  }
+  </script>
+</html>
